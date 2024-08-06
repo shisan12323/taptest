@@ -100,7 +100,7 @@
             padding: 20px;
             border-radius: 4px;
             margin-bottom: 20px;
-            height: 300px;
+            height: 200px;
             overflow: hidden;
             position: relative;
         }
@@ -150,7 +150,48 @@
             border-radius: 4px;
             margin-bottom: 20px;
         }
-        /* 其他样式保持不变 */
+        .section h3 {
+            margin-top: 0;
+        }
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .course-item {
+            flex: 0 0 calc(20% - 16px);
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .course-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .hot-courses {
+            display: flex;
+            flex-direction: column;
+        }
+        .hot-course-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .hot-course-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+        .hot-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .hot-list li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -208,14 +249,6 @@
                         <h2>2024 企业数智化核心技能专题 3</h2>
                         <p>行业先锋企业代表推荐课程</p>
                     </div>
-                    <div class="carousel-item">
-                        <h2>2024 企业数智化核心技能专题 4</h2>
-                        <p>行业先锋企业代表推荐课程</p>
-                    </div>
-                    <div class="carousel-item">
-                        <h2>2024 企业数智化核心技能专题 5</h2>
-                        <p>行业先锋企业代表推荐课程</p>
-                    </div>
                 </div>
                 <div class="carousel-controls">
                     <button class="carousel-control" onclick="moveCarousel(-1)">&#10094;</button>
@@ -228,7 +261,67 @@
                 <p>注册即可获得多门课程学习权限</p>
             </div>
             
-            <!-- 其他内容保持不变 -->
+            <div class="section">
+                <h3>精选课程</h3>
+                <div class="course-list">
+                    <div class="course-item">
+                        <img src="placeholder.jpg" alt="全新整理「AIGC系列」">
+                        <h4>全新整理「AIGC系列」</h4>
+                        <p>最新AI技术课程</p>
+                    </div>
+                    <div class="course-item">
+                        <img src="placeholder.jpg" alt="3小时Rust从入门到实战">
+                        <h4>3小时Rust从入门到实战</h4>
+                        <p>快速掌握Rust编程</p>
+                    </div>
+                    <div class="course-item">
+                        <img src="placeholder.jpg" alt="数学公开课">
+                        <h4>数学公开课</h4>
+                        <p>深入浅出讲解数学概念</p>
+                    </div>
+                    <div class="course-item">
+                        <img src="placeholder.jpg" alt="3小时掌握Prompt Engineering">
+                        <h4>3小时掌握Prompt Engineering</h4>
+                        <p>AI提示工程入门</p>
+                    </div>
+                    <div class="course-item">
+                        <img src="placeholder.jpg" alt="8小时上手Go语言">
+                        <h4>8小时上手Go语言</h4>
+                        <p>Go语言快速入门</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>热门在学</h3>
+                <div class="hot-courses">
+                    <div class="hot-course-item">
+                        <img src="placeholder.jpg" alt="MySQL实战45讲">
+                        <div>
+                            <h4>MySQL实战45讲</h4>
+                            <p>林晓斌 前阿里资深技术专家</p>
+                            <p>定价 ¥129 优惠价 ¥99</p>
+                        </div>
+                    </div>
+                    <div class="hot-course-item">
+                        <img src="placeholder.jpg" alt="数据结构与算法之美">
+                        <div>
+                            <h4>数据结构与算法之美</h4>
+                            <p>王争 前Google工程师</p>
+                            <p>定价 ¥129 优惠价 ¥99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>热学榜单</h3>
+                <ol class="hot-list">
+                    <li>中国人工智能实践蓝皮书</li>
+                    <li>10x程序员工作法</li>
+                    <li>趣谈网络协议</li>
+                </ol>
+            </div>
         </main>
     </div>
 
