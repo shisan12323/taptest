@@ -5,7 +5,6 @@ const tools = [
         description: "Idea-Hunt - Innovative Idea Generation and Collaborative Brainstorming Platform for Creative Solutions...",
         image: "https://via.placeholder.com/300x200.png?text=Idea-Hunt",
         tags: ["Idea Generation", "Brainstorming", "Creativity"],
-        features: ["Collaborative platform", "Idea voting system", "Integration with project management tools"]
     },
     {
         id: 2,
@@ -13,9 +12,49 @@ const tools = [
         description: "Flux AI Online - Free Next-Generation AI Image Generator and Open-Source Model",
         image: "https://via.placeholder.com/300x200.png?text=Flux+AI+Online",
         tags: ["AI", "Image Generation", "Open Source"],
-        features: ["Advanced algorithms", "High-quality image generation", "Intuitive interface", "Open-source foundation"]
     },
-    // Add more tools here
+    {
+        id: 3,
+        name: "AI Navs Site 人工智能导航网站",
+        description: "AI Navs Site - 2024 Best and Latest AI Tools for Autonomous Vessel Navigation and GNSS Data Analysis...",
+        image: "https://via.placeholder.com/300x200.png?text=AI+Navs+Site",
+        tags: ["AI", "Navigation", "Data Analysis"],
+    },
+    {
+        id: 4,
+        name: "Online Tally Counter 在线理货计数器",
+        description: "Online Tally Counter - Free Digital Tally Counter Tool for Events and Counting",
+        image: "https://via.placeholder.com/300x200.png?text=Online+Tally+Counter",
+        tags: ["Counting", "Events", "Digital Tool"],
+    },
+    {
+        id: 5,
+        name: "HappyPages AI - AI Coloring Page Generator",
+        description: "HappyPages AI - AI Coloring Page Generator: Discover HappyPages AI, the ultimate AI content creation platform designed to unleash creativity and...",
+        image: "https://via.placeholder.com/300x200.png?text=HappyPages+AI",
+        tags: ["AI", "Coloring", "Creativity"],
+    },
+    {
+        id: 6,
+        name: "Escape the Algorithm - Achieve...",
+        description: "Escape the Algorithm - Escape the Algorithm empowers you to take control of your online experience by eliminating...",
+        image: "https://via.placeholder.com/300x200.png?text=Escape+the+Algorithm",
+        tags: ["Algorithm", "Online Experience", "Control"],
+    },
+    {
+        id: 7,
+        name: "Cookie Checker - ComplyDog...",
+        description: "Complydog.com: ComplyDog offers an easy-to-use Cookie Checker that simplifies GDPR compliance for software companies. Ensure...",
+        image: "https://via.placeholder.com/300x200.png?text=Cookie+Checker",
+        tags: ["GDPR", "Compliance", "Cookie"],
+    },
+    {
+        id: 8,
+        name: "Minduck - Official Minduck...",
+        description: "Official minduck.com: Discover Minduck, the official platform for innovative mind-mapping solutions. Our Minduck services include...",
+        image: "https://via.placeholder.com/300x200.png?text=Minduck",
+        tags: ["Mind Mapping", "Productivity", "Innovation"],
+    },
 ];
 
 function displayTools() {
@@ -37,6 +76,9 @@ function createToolCard(tool) {
             <div class="tool-tags">
                 ${tool.tags.map(tag => `<span>${tag}</span>`).join('')}
             </div>
+            <div class="tool-stats">
+                <span>👁 --</span>
+            </div>
         </div>
     `;
     card.addEventListener('click', () => {
@@ -45,28 +87,4 @@ function createToolCard(tool) {
     return card;
 }
 
-function displayToolDetail() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const toolId = parseInt(urlParams.get('id'));
-    const tool = tools.find(t => t.id === toolId);
-
-    if (tool) {
-        document.getElementById('tool-name').textContent = tool.name;
-        document.getElementById('tool-image').src = tool.image;
-        document.getElementById('tool-image').alt = tool.name;
-        document.getElementById('tool-description').innerHTML = `<h2>Description</h2><p>${tool.description}</p>`;
-        document.getElementById('tool-features').innerHTML = `
-            <h2>Features</h2>
-            <ul>
-                ${tool.features.map(feature => `<li>${feature}</li>`).join('')}
-            </ul>
-        `;
-    }
-}
-
-// Run the appropriate function based on the current page
-if (document.getElementById('tools-grid')) {
-    displayTools();
-} else if (document.getElementById('tool-detail')) {
-    displayToolDetail();
-}
+displayTools();
