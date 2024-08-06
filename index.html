@@ -78,27 +78,52 @@
         }
         .sidebar h3 {
             margin-top: 0;
+            font-size: 18px;
         }
         .sidebar ul {
             list-style-type: none;
             padding: 0;
         }
         .sidebar ul li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
         }
         .content {
             flex-grow: 1;
             margin-left: 20px;
         }
-        .hero {
+        .carousel {
             background-color: #e6f7ff;
-            padding: 30px;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            height: 300px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .carousel-item {
+            display: inline-block;
+            width: 80%;
+            height: 100%;
+            background-color: #fff;
+            margin-right: 20px;
+            border-radius: 8px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .carousel-item h2 {
+            margin-top: 0;
+            color: #1890ff;
+        }
+        .new-user-gift {
+            background-color: #fff5f5;
+            padding: 20px;
             border-radius: 4px;
             margin-bottom: 20px;
         }
-        .hero h1 {
+        .new-user-gift h3 {
             margin-top: 0;
-            color: #1890ff;
+            color: #ff4d4f;
         }
         .section {
             background-color: #fff;
@@ -141,22 +166,28 @@
             color: #fa8919;
             font-weight: bold;
         }
-        .hot-courses {
+        .hot-section {
             display: flex;
             justify-content: space-between;
         }
-        .hot-course {
-            width: 48%;
+        .hot-courses {
+            width: 65%;
             background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 4px;
         }
-        .hot-course-info {
+        .hot-course {
             display: flex;
-            padding: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .hot-course-info img {
+        .hot-course:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .hot-course img {
             width: 80px;
             height: 80px;
             border-radius: 50%;
@@ -172,10 +203,10 @@
             color: #666;
         }
         .hot-ranking {
-            background-color: #fff5f5;
-            padding: 15px;
-            border-radius: 8px;
-            margin-left: 20px;
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
         }
         .hot-ranking h3 {
             margin-top: 0;
@@ -230,10 +261,33 @@
         </aside>
         
         <main class="content">
-            <section class="hero">
-                <h1>2024 企业数智化核心技能专题</h1>
-                <p>行业先锋企业代表推荐课程</p>
-            </section>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <h2>2024 企业数智化核心技能专题 1</h2>
+                    <p>行业先锋企业代表推荐课程</p>
+                </div>
+                <div class="carousel-item">
+                    <h2>2024 企业数智化核心技能专题 2</h2>
+                    <p>行业先锋企业代表推荐课程</p>
+                </div>
+                <div class="carousel-item">
+                    <h2>2024 企业数智化核心技能专题 3</h2>
+                    <p>行业先锋企业代表推荐课程</p>
+                </div>
+                <div class="carousel-item">
+                    <h2>2024 企业数智化核心技能专题 4</h2>
+                    <p>行业先锋企业代表推荐课程</p>
+                </div>
+                <div class="carousel-item">
+                    <h2>2024 企业数智化核心技能专题 5</h2>
+                    <p>行业先锋企业代表推荐课程</p>
+                </div>
+            </div>
+
+            <div class="new-user-gift">
+                <h3>新人注册领好礼</h3>
+                <p>注册即可获得多门课程学习权限</p>
+            </div>
             
             <section class="section">
                 <h2>精选课程</h2>
@@ -276,43 +330,39 @@
                 </div>
             </section>
             
-            <section class="section">
-                <h2>热门在学</h2>
+            <div class="hot-section">
                 <div class="hot-courses">
+                    <h2>热门在学</h2>
                     <div class="hot-course">
-                        <div class="hot-course-info">
-                            <img src="https://via.placeholder.com/80x80" alt="林晓斌">
-                            <div class="hot-course-details">
-                                <h3>MySQL 实战 45 讲</h3>
-                                <p>林晓斌 网名丁奇，前腾讯云数据库负责人</p>
-                                <p>49讲 | 227710 人已学习</p>
-                                <p class="course-price">新人首单 ¥68 68日元</p>
-                            </div>
+                        <img src="https://via.placeholder.com/80x80" alt="林晓斌">
+                        <div class="hot-course-details">
+                            <h3>MySQL 实战 45 讲</h3>
+                            <p>林晓斌 网名丁奇，前腾讯云数据库负责人</p>
+                            <p>49讲 | 227710 人已学习</p>
+                            <p class="course-price">新人首单 ¥68 68日元</p>
                         </div>
                     </div>
                     <div class="hot-course">
-                        <div class="hot-course-info">
-                            <img src="https://via.placeholder.com/80x80" alt="王争">
-                            <div class="hot-course-details">
-                                <h3>数据结构与算法之美</h3>
-                                <p>王争 前Google工程师</p>
-                                <p>81讲 | 285815 人已学习</p>
-                                <p class="course-price">新人首单 ¥68 68日元</p>
-                            </div>
+                        <img src="https://via.placeholder.com/80x80" alt="王争">
+                        <div class="hot-course-details">
+                            <h3>数据结构与算法之美</h3>
+                            <p>王争 前Google工程师</p>
+                            <p>81讲 | 285815 人已学习</p>
+                            <p class="course-price">新人首单 ¥68 68日元</p>
                         </div>
                     </div>
                 </div>
-            </section>
+                
+                <div class="hot-ranking">
+                    <h3>热学榜单</h3>
+                    <ol>
+                        <li>中国人工智能成熟度模型...</li>
+                        <li>10x程序员工作法</li>
+                        <li>趣谈网络协议</li>
+                    </ol>
+                </div>
+            </div>
         </main>
-        
-        <aside class="hot-ranking">
-            <h3>热学榜单</h3>
-            <ol>
-                <li>中国人工智能成熟度模型...</li>
-                <li>10x程序员工作法</li>
-                <li>趣谈网络协议</li>
-            </ol>
-        </aside>
     </div>
 </body>
 </html>
