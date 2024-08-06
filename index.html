@@ -106,6 +106,87 @@
             border-radius: 4px;
             margin-bottom: 20px;
         }
+        .course-list {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 20px;
+        }
+        .course-card {
+            flex: 0 0 auto;
+            width: 200px;
+            margin-right: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .course-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .course-info {
+            padding: 10px;
+        }
+        .course-info h3 {
+            margin: 0 0 5px;
+            font-size: 16px;
+        }
+        .course-info p {
+            margin: 0;
+            font-size: 12px;
+            color: #666;
+        }
+        .course-price {
+            color: #fa8919;
+            font-weight: bold;
+        }
+        .hot-courses {
+            display: flex;
+            justify-content: space-between;
+        }
+        .hot-course {
+            width: 48%;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .hot-course-info {
+            display: flex;
+            padding: 15px;
+        }
+        .hot-course-info img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .hot-course-details h3 {
+            margin: 0 0 5px;
+            font-size: 18px;
+        }
+        .hot-course-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .hot-ranking {
+            background-color: #fff5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+        .hot-ranking h3 {
+            margin-top: 0;
+            color: #ff4d4f;
+        }
+        .hot-ranking ol {
+            padding-left: 20px;
+        }
+        .hot-ranking li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -156,14 +237,82 @@
             
             <section class="section">
                 <h2>精选课程</h2>
-                <!-- 这里可以添加课程列表 -->
+                <div class="course-list">
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/200x120" alt="全新整理「AIGC系列」">
+                        <div class="course-info">
+                            <h3>全新整理「AIGC系列」</h3>
+                            <p>极客时间 训练营</p>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/200x120" alt="3小时 Rust 从入门到实战">
+                        <div class="course-info">
+                            <h3>3小时 Rust 从入门到实战</h3>
+                            <p>陈天 Tubi TV 研发副总裁</p>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/200x120" alt="软考公开课">
+                        <div class="course-info">
+                            <h3>软考公开课</h3>
+                            <p>姜秀荣 & 王建平 软考辅导专家</p>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/200x120" alt="3小时掌握Prompt Engineering">
+                        <div class="course-info">
+                            <h3>3小时掌握Prompt Engineering</h3>
+                            <p>彭靖田 品览联合创始人</p>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/200x120" alt="8小时上手 Go 语言">
+                        <div class="course-info">
+                            <h3>8小时上手 Go 语言</h3>
+                            <p>邓明 Beego PMC, Asta 作者</p>
+                        </div>
+                    </div>
+                </div>
             </section>
             
             <section class="section">
                 <h2>热门在学</h2>
-                <!-- 这里可以添加热门课程列表 -->
+                <div class="hot-courses">
+                    <div class="hot-course">
+                        <div class="hot-course-info">
+                            <img src="https://via.placeholder.com/80x80" alt="林晓斌">
+                            <div class="hot-course-details">
+                                <h3>MySQL 实战 45 讲</h3>
+                                <p>林晓斌 网名丁奇，前腾讯云数据库负责人</p>
+                                <p>49讲 | 227710 人已学习</p>
+                                <p class="course-price">新人首单 ¥68 68日元</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hot-course">
+                        <div class="hot-course-info">
+                            <img src="https://via.placeholder.com/80x80" alt="王争">
+                            <div class="hot-course-details">
+                                <h3>数据结构与算法之美</h3>
+                                <p>王争 前Google工程师</p>
+                                <p>81讲 | 285815 人已学习</p>
+                                <p class="course-price">新人首单 ¥68 68日元</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
+        
+        <aside class="hot-ranking">
+            <h3>热学榜单</h3>
+            <ol>
+                <li>中国人工智能成熟度模型...</li>
+                <li>10x程序员工作法</li>
+                <li>趣谈网络协议</li>
+            </ol>
+        </aside>
     </div>
 </body>
 </html>
