@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极客时间 - 后端/架构课程</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f5f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fa8919;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 8px 15px;
+            background-color: #fa8919;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .category-nav {
+            background-color: #fff;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .category-nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        .category-nav ul li {
+            margin: 0 15px;
+        }
+        .category-nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .sub-category {
+            background-color: #fff;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .sub-category ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        .sub-category ul li {
+            margin: 5px 10px;
+        }
+        .sub-category ul li a {
+            text-decoration: none;
+            color: #666;
+        }
+        .sort-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .sort-options select {
+            padding: 5px;
+        }
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .course-card {
+            flex: 0 0 calc(50% - 10px);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .course-info {
+            padding: 15px;
+        }
+        .course-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .course-teacher {
+            font-size: 14px;
+            color: #666;
+        }
+        .course-students {
+            font-size: 14px;
+            color: #999;
+        }
+        .course-price {
+            font-size: 18px;
+            color: #fa8919;
+            font-weight: bold;
+        }
+        .try-button {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: #fa8919;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">极客时间</div>
+                <ul>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">训练营</a></li>
+                    <li><a href="#">认证</a></li>
+                    <li><a href="#">部落</a></li>
+                    <li><a href="#">资讯</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="搜索课程">
+                    <button>搜索</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="category-nav">
+        <ul>
+            <li><a href="#" class="active">全部</a></li>
+            <li><a href="#">后端/架构</a></li>
+            <li><a href="#">前端/移动</a></li>
+            <li><a href="#">计算机基础</a></li>
+            <li><a href="#">AI/大数据</a></li>
+            <li><a href="#">运维/测试</a></li>
+            <li><a href="#">产品/运营</a></li>
+            <li><a href="#">管理/成长</a></li>
+        </ul>
+    </div>
+
+    <div class="sub-category">
+        <ul>
+            <li><a href="#">全部</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Go</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">.NET</a></li>
+            <li><a href="#">C语言</a></li>
+            <li><a href="#">基本功</a></li>
+            <li><a href="#">分布式</a></li>
+            <li><a href="#">中间件</a></li>
+            <li><a href="#">区块链</a></li>
+            <li><a href="#">全栈</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">中台</a></li>
+            <li><a href="#">DDD</a></li>
+            <li><a href="#">案例</a></li>
+            <li><a href="#">微服务</a></li>
+            <li><a href="#">数据库</a></li>
+            <li><a href="#">Rust</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="sort-options">
+            <span>共 125 个</span>
+            <select>
+                <option>综合</option>
+                <option>最新</option>
+                <option>最热</option>
+                <option>价格由高到低</option>
+                <option>价格由低到高</option>
+            </select>
+        </div>
+
+        <div class="course-list">
+            <div class="course-card">
+                <img src="placeholder.jpg" alt="MySQL实战45讲" class="course-image">
+                <div class="course-info">
+                    <div class="course-title">MySQL实战45讲</div>
+                    <div class="course-meta">
+                        <span class="course-teacher">林晓斌</span>
+                        <span class="course-students">22.8万人学习</span>
+                    </div>
+                    <div class="course-price">¥68.00</div>
+                    <a href="#" class="try-button">试读</a>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="placeholder.jpg" alt="左耳听风" class="course-image">
+                <div class="course-info">
+                    <div class="course-title">左耳听风</div>
+                    <div class="course-meta">
+                        <span class="course-teacher">陈皓</span>
+                        <span class="course-students">18.3万人学习</span>
+                    </div>
+                    <div class="course-price">¥98.00</div>
+                    <a href="#" class="try-button">试读</a>
+                </div>
+            </div>
+            <!-- 更多课程卡片 -->
+        </div>
+    </div>
+</body>
+</html>
