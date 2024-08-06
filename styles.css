@@ -1,59 +1,318 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-.search input {
-    padding: 5px;
-}
-
-.search button {
-    padding: 5px 10px;
-    background-color: #fa8919;
-    color: white;
-    border: none;
-}
-
-main {
-    display: flex;
-    padding: 20px;
-}
-
-aside {
-    width: 200px;
-}
-
-.hero {
-    background-color: #e6f7ff;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.course-list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* 添加更多样式... */
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极客时间 - 专业IT技能学习平台</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f5f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fa8919;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 8px 15px;
+            background-color: #fa8919;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .user-actions a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .main-content {
+            display: flex;
+            margin-top: 20px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .content {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+        .hero {
+            background-color: #e6f7ff;
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            margin-top: 0;
+            color: #1890ff;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .course-list {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 20px;
+        }
+        .course-card {
+            flex: 0 0 auto;
+            width: 200px;
+            margin-right: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .course-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        .course-info {
+            padding: 10px;
+        }
+        .course-info h3 {
+            margin: 0 0 5px;
+            font-size: 16px;
+        }
+        .course-info p {
+            margin: 0;
+            font-size: 12px;
+            color: #666;
+        }
+        .course-price {
+            color: #fa8919;
+            font-weight: bold;
+        }
+        .hot-courses {
+            display: flex;
+            justify-content: space-between;
+        }
+        .hot-course {
+            width: 48%;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .hot-course-info {
+            display: flex;
+            padding: 15px;
+        }
+        .hot-course-info img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .hot-course-details h3 {
+            margin: 0 0 5px;
+            font-size: 18px;
+        }
+        .hot-course-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .hot-ranking {
+            background-color: #fff5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+        .hot-ranking h3 {
+            margin-top: 0;
+            color: #ff4d4f;
+        }
+        .hot-ranking ol {
+            padding-left: 20px;
+        }
+        .hot-ranking li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">极客时间</div>
+                <ul>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">训练营</a></li>
+                    <li><a href="#">认证</a></li>
+                    <li><a href="#">部落</a></li>
+                    <li><a href="#">资讯</a></li>
+                    <li><a href="#">企业版</a></li>
+                    <li><a href="#">技术大会</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="搜索课程">
+                    <button>搜索</button>
+                </div>
+                <div class="user-actions">
+                    <a href="#">下载App</a>
+                    <a href="#">登录/注册</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container main-content">
+        <aside class="sidebar">
+            <h3>课程分类</h3>
+            <ul>
+                <li>后端/架构</li>
+                <li>前端/移动</li>
+                <li>计算机基础</li>
+                <li>AI/大数据</li>
+                <li>运维/测试</li>
+                <li>产品/运营</li>
+                <li>管理/成长</li>
+            </ul>
+        </aside>
+        
+        <main class="content">
+            <section class="hero">
+                <h1>2024 企业数智化核心技能专题</h1>
+                <p>行业先锋企业代表推荐课程</p>
+            </section>
+            
+            <section class="section">
+                <h2>精选课程</h2>
+                <div class="course-list">
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/200x120" alt="全新整理「AIGC系列」">
+                        <div class="course-info">
+                            <h3>全新整理「AIGC系列」</h3>
+                            <p>极客时间 训练营</p>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/200x120" alt="3小时 Rust 从入门到实战">
+                        <div class="course-info">
+                            <h3>3小时 Rust 从入门到实战</h3>
+                            <p>陈天 Tubi TV 研发副总裁</p>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/200x120" alt="软考公开课">
+                        <div class="course-info">
+                            <h3>软考公开课</h3>
+                            <p>姜秀荣 & 王建平 软考辅导专家</p>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/200x120" alt="3小时掌握Prompt Engineering">
+                        <div class="course-info">
+                            <h3>3小时掌握Prompt Engineering</h3>
+                            <p>彭靖田 品览联合创始人</p>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/200x120" alt="8小时上手 Go 语言">
+                        <div class="course-info">
+                            <h3>8小时上手 Go 语言</h3>
+                            <p>邓明 Beego PMC, Asta 作者</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>热门在学</h2>
+                <div class="hot-courses">
+                    <div class="hot-course">
+                        <div class="hot-course-info">
+                            <img src="https://via.placeholder.com/80x80" alt="林晓斌">
+                            <div class="hot-course-details">
+                                <h3>MySQL 实战 45 讲</h3>
+                                <p>林晓斌 网名丁奇，前腾讯云数据库负责人</p>
+                                <p>49讲 | 227710 人已学习</p>
+                                <p class="course-price">新人首单 ¥68 68日元</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hot-course">
+                        <div class="hot-course-info">
+                            <img src="https://via.placeholder.com/80x80" alt="王争">
+                            <div class="hot-course-details">
+                                <h3>数据结构与算法之美</h3>
+                                <p>王争 前Google工程师</p>
+                                <p>81讲 | 285815 人已学习</p>
+                                <p class="course-price">新人首单 ¥68 68日元</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <aside class="hot-ranking">
+            <h3>热学榜单</h3>
+            <ol>
+                <li>中国人工智能成熟度模型...</li>
+                <li>10x程序员工作法</li>
+                <li>趣谈网络协议</li>
+            </ol>
+        </aside>
+    </div>
+</body>
+</html>
