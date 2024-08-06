@@ -3,34 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>极客时间 - 编程学习平台</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>极客时间 - 专业IT技能学习平台</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f5f6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fa8919;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 8px 15px;
+            background-color: #fa8919;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .user-actions a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .main-content {
+            display: flex;
+            margin-top: 20px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .content {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+        .hero {
+            background-color: #e6f7ff;
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            margin-top: 0;
+            color: #1890ff;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">极客时间</div>
-            <ul>
-                <li><a href="#">课程</a></li>
-                <li><a href="#">训练营</a></li>
-                <li><a href="#">认证</a></li>
-                <li><a href="#">部落</a></li>
-                <li><a href="#">资讯</a></li>
-                <li><a href="#">企业版</a></li>
-                <li><a href="#">技术大会</a></li>
-            </ul>
-            <div class="search">
-                <input type="text" placeholder="搜索课程">
-                <button>搜索</button>
-            </div>
-            <div class="user-actions">
-                <a href="#">下载App</a>
-                <a href="#">登录/注册</a>
-            </div>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">极客时间</div>
+                <ul>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">训练营</a></li>
+                    <li><a href="#">认证</a></li>
+                    <li><a href="#">部落</a></li>
+                    <li><a href="#">资讯</a></li>
+                    <li><a href="#">企业版</a></li>
+                    <li><a href="#">技术大会</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="搜索课程">
+                    <button>搜索</button>
+                </div>
+                <div class="user-actions">
+                    <a href="#">下载App</a>
+                    <a href="#">登录/注册</a>
+                </div>
+            </nav>
+        </div>
     </header>
-    <main>
-        <aside>
+    
+    <div class="container main-content">
+        <aside class="sidebar">
             <h3>课程分类</h3>
             <ul>
                 <li>后端/架构</li>
@@ -42,26 +147,23 @@
                 <li>管理/成长</li>
             </ul>
         </aside>
-        <section class="hero">
-            <h1>2024 企业数智化核心技能专题</h1>
-            <p>行业先锋企业代表推荐课程</p>
-        </section>
-        <section class="featured-courses">
-            <h2>精选课程</h2>
-            <div class="course-list">
-                <!-- 这里添加课程卡片 -->
-            </div>
-        </section>
-        <section class="hot-courses">
-            <h2>热门在学</h2>
-            <div class="course-list">
-                <!-- 这里添加热门课程 -->
-            </div>
-        </section>
-    </main>
-    <footer>
-        <!-- 页脚内容 -->
-    </footer>
-    <script src="script.js"></script>
+        
+        <main class="content">
+            <section class="hero">
+                <h1>2024 企业数智化核心技能专题</h1>
+                <p>行业先锋企业代表推荐课程</p>
+            </section>
+            
+            <section class="section">
+                <h2>精选课程</h2>
+                <!-- 这里可以添加课程列表 -->
+            </section>
+            
+            <section class="section">
+                <h2>热门在学</h2>
+                <!-- 这里可以添加热门课程列表 -->
+            </section>
+        </main>
+    </div>
 </body>
 </html>
